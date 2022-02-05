@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="app">
+        <h2>Счётчик = {{ counter }} </h2>
+
+        <button v-on:click="counter++">Увеличить</button>
+        <button v-on:click="counter--">Уменьшить</button>
+        <button v-on:click="counter = 0">Сброс</button>
+        <!-- <button v-on:click="onHover">Сброс</button> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                counter:0
+            }
+            // methods: {
+            //    onHover:function() {
+            //     this.counter = 0
+            //     event.target.style.backgroundColor = "red";
+            //    }
+            // }
+        })
+
+    </script>
+
+</body>
+</html>
